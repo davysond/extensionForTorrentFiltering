@@ -1,0 +1,32 @@
+{
+    "name": "Result Filter for Torrent",
+    "description": "An extension to filter the results of websites with Torrent",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["scripting", "activeTab", "webRequest"],
+    "action": {
+        "default_icon": {
+            "16": "images/icon.png",
+            "24": "images/icon.png",
+            "32": "images/icon.png",
+            "48": "images/icon.png",
+            "128": "images/icon.png"
+        }
+    },
+    "icons": {
+        "16": "images/icon.png",
+        "24": "images/icon.png",
+        "32": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+    },
+    "host_permissions": ["https://thepiratebay.org/"],
+    "content_scripts": [
+        { 
+            "matches": [
+                "https://thepiratebay.org/*"
+            ],
+            "js": ["script.js"]
+        }
+    ]
+}
